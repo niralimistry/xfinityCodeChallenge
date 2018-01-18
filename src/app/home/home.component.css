@@ -1,0 +1,12 @@
+th,td{
+  text-align:center;
+}
+
+table{
+  margin:auto !important;
+  border:1px solid black !important;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+
+}

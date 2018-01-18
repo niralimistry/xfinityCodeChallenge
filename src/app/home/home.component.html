@@ -1,0 +1,14 @@
+
+<div class="col-md-6">
+  <table class="table table-striped table-bordered">
+    <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Amount</th>
+    </tr>
+    <tr *ngFor="let item of records">
+      <td>{{item.name}}</td>
+      <td>{{item.category}}</td>
+      <td>{{item.amount}}</td>
+    </tr></table>
+</div>
