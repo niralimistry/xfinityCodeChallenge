@@ -2,11 +2,11 @@
 <div class="col-md-6">
   <table class="table table-striped table-bordered">
     <tr>
-    <th>Name</th>
-    <th>Category</th>
-    <th>Amount</th>
+      <th (click)="order('name')">Name</th>
+      <th (click)="order('category')">Category</th>
+      <th (click)="order('amount')">Amount</th>
     </tr>
-    <tr *ngFor="let item of records">
+    <tr *ngFor="let item of records | orderBy: {key: col, orderDir: orderDir}">
       <td>{{item.name}}</td>
       <td>{{item.category}}</td>
       <td>{{item.amount}}</td>

@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {DataService} from '../services/data.service';
+import {CustomPipe} from '../pipes/custom.pipe';
 import {OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  providers: [DataService],
+  providers: [DataService, CustomPipe],
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
@@ -26,5 +27,23 @@ export class HomeComponent implements OnInit{
       }
     });
   }
+
+  order(key){
+    this.down = !this.down;
+    this.col = key;
+    this.orderDir = this.down ? 1 : -1;
+  }
+
+  // asc(key) {
+  //   this.down = !this.down;
+  //   this.col = key;
+  //   this.orderDir = 1;
+  // }
+  //
+  // desc(key) {
+  //   this.down = this.down;
+  //   this.col = key;
+  //   this.orderDir = -1;
+  // }
 
 }

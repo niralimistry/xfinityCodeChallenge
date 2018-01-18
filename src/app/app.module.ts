@@ -5,8 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProcessDataComponent } from './process-data/process-data.component';
 import {HttpClientModule} from '@angular/common/http';
+import {CustomPipe} from './pipes/custom.pipe';
 
-const appRoutes: Routes = [
+const appRoutes : Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'ProcessData', component: ProcessDataComponent },
 ];
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ProcessDataComponent
+    ProcessDataComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule
